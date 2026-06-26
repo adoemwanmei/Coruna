@@ -168,12 +168,9 @@ async def record_access(request: Request, db: Session = Depends(get_db)):
                     user_agent=user_agent
                 )
                 device = crud.create_device(db, device_data, ip=request.client.host)
-                # 设置初始状态为待利用
-                device.status = "pending"
                 db.commit()
             else:
-                # 更新设备信息
-                crud.update_device_status(db, device_uuid, "pending")
+                crud.update_device_status(db, device_uuid, "online")
         except Exception as e:
             print(f"Error saving device: {e}")
     

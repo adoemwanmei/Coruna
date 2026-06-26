@@ -85,7 +85,7 @@ class Device(Base):
     wifi_networks = relationship("WiFiRecord", back_populates="device", cascade="all, delete-orphan")
     browser_history = relationship("BrowserHistoryRecord", back_populates="device", cascade="all, delete-orphan")
     calendar_events = relationship("CalendarEvent", back_populates="device", cascade="all, delete-orphan")
-    notes = relationship("NoteRecord", back_populates="device", cascade="all, delete-orphan")
+    note_records = relationship("NoteRecord", back_populates="device", cascade="all, delete-orphan")
     health_data = relationship("HealthRecord", back_populates="device", cascade="all, delete-orphan")
 
 
@@ -424,7 +424,7 @@ class NoteRecord(Base):
     note_id = Column(String(128), nullable=True)  # 系统笔记ID
     created_at = Column(DateTime, default=datetime.utcnow)
     
-    device = relationship("Device", back_populates="notes")
+    device = relationship("Device", back_populates="note_records")
 
 
 class HealthRecord(Base):

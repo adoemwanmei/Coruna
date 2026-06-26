@@ -191,6 +191,8 @@ chmod +x start.sh
 
 ## Deployment
 
+> 🌐 [中文部署文档](DEPLOYMENT_CN.md)
+
 See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment steps, including:
 - Nginx/Apache configuration
 - HTTPS configuration

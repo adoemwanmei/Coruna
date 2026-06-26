@@ -191,7 +191,9 @@ chmod +x start.sh
 
 ## 部署说明
 
-详细部署步骤见 [DEPLOYMENT.md](DEPLOYMENT.md)，包含：
+> 🌐 [English Deployment Guide](DEPLOYMENT.md)
+
+详细部署步骤见 [DEPLOYMENT_CN.md](DEPLOYMENT_CN.md)，包含：
 - Nginx/Apache 配置
 - HTTPS 配置
 - 防火墙设置
